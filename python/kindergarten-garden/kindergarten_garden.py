@@ -20,6 +20,7 @@ class Plant(Enum):
         for plant in Plant:
             if plant.letter == letter:
                 return plant
+        raise ValueError(f"{letter} doesn't match any plants")
 
 
 class Garden:

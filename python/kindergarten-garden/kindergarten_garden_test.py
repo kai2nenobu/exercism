@@ -72,6 +72,19 @@ class KindergartenGardenTest(unittest.TestCase):
             garden.plants("Xander"), ["Radishes", "Grass", "Clover", "Violets"]
         )
 
+    def test_garden_doesnt_have_two_rows(self):
+        with self.assertRaises(ValueError):
+            Garden("VRCGVVRVCGGCCGVRGCVCGCGV")
+
+    def test_rows_of_garden_have_mismatch_length(self):
+        with self.assertRaises(ValueError):
+            Garden("VVCG\nVV")
+
+    def test_garden_has_invalid_plant_letter(self):
+        garden = Garden("RC\nZG")
+        with self.assertRaises(ValueError):
+            garden.plants("Alice")
+
 
 if __name__ == "__main__":
     unittest.main()
