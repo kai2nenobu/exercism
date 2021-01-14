@@ -14,10 +14,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Build a runtime docker image
-        run: docker build -t my/exercism .
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.CR_PAT }}
       - name: Test python exercises
         run: >-
-          docker run --rm -v "${PWD}:/exercism/python" my/exercism
+          docker run --rm -v "${PWD}:/exercism/python" ghcr.io/${{ github.repository_owner }}/exercism-python
           pytest --cov --cov-branch --cov-fail-under=98
         working-directory: python
