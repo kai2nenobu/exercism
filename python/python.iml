@@ -8,6 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/raindrops" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/two-fer" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/hamming" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/isogram" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/matrix" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
     </content>
