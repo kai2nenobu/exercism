@@ -11,6 +11,7 @@
       <sourceFolder url="file://$MODULE_DIR$/isogram" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/matrix" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/twelve-days" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/scrabble-score" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/word-count" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
     </content>
