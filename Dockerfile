@@ -1,10 +1,9 @@
-FROM ubuntu:20.04
+FROM python:3.8-slim
 
 ENV EXERCISM_WORKSPACE=/exercism
-RUN apt update
 
 # Setup python requirements
-RUN apt install -y curl python3-pip python-is-python3
+RUN apt update && apt install -y curl
 RUN curl -sSL --retry 3 "https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py" | python \
     && python ~/.poetry/bin/poetry config virtualenvs.create false
 
