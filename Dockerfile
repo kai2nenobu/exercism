@@ -1,5 +1,7 @@
 FROM python:3.8-slim
 
+LABEL org.opencontainers.image.source https://github.com/kai2nenobu/exercism
+
 ENV EXERCISM_WORKSPACE=/exercism
 
 # Setup python requirements
